@@ -19,8 +19,7 @@ public class SessionValidationMiddleware implements PreMiddleware {
 
     @Override
     public HttpContext apply(HttpContext context) {
-        // had to change these from var to explicit types
-        var sessionToken = context.getHeaders().get("Session-Token")
+        var sessionToken = context.getHeaders().get("Authorization")
                 .flatMap(Maybe::ofNullable).flatMap(tryParseLong);
         var user = sessionToken.flatMap(UserManager::getUserFromSession);
 

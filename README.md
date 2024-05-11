@@ -7,7 +7,9 @@ Appended to the Curryful detail prompts found in `/curryful-detail-prompts`:
     values and exceptions using monads, throughout the application. Classes
     provided by curryful-commons can help you out with that. Take the Curryful
     example application as a reference. There are only two endpoints:
-    - POST /login - takes a username and returns a session password
+
+    - POST /login - takes a username and password as query parameters and
+            returns a session password
     - GET /yahtzee - generates five random dice rolls and returns the result
 
     The available users are:
